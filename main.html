@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        .menu {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .menu-btn {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu-btn.active {
+            background: #f0f0f0;
+        }
+
+        .content-container {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Стили для контейнера тестирования */
+        .testing-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .blue-box {
+            background: #2196F3;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .pink-box {
+            background: #E91E63;
+            height: 150px;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        .pink-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Стили для обычного контента */
+        .default-content {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-btn active" onclick="showContent('testing')">ТЕСТИРОВАНИЕ</button>
+        <button class="menu-btn" onclick="showContent('sections')">РАЗДЕЛЫ</button>
+        <button class="menu-btn" onclick="showContent('rating')">РЕЙТИНГ</button>
+        <button class="menu-btn" onclick="showContent('shop')">МАГАЗИН</button>
+    </div>
+
+    <!-- Контейнер для тестирования -->
+    <div id="testing" class="content-container testing-content">
+        <div class="blue-box"></div>
+        <div class="pink-row">
+            <div class="pink-box"></div>
+            <div class="pink-box"></div>
+        </div>
+    </div>
+
+    <!-- Контейнеры для других разделов -->
+    <div id="sections" class="content-container default-content">
+        Контент разделов
+    </div>
+    <div id="rating" class="content-container default-content">
+        Рейтинг пользователей
+    </div>
+    <div id="shop" class="content-container default-content">
+        Магазин предметов
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            // Скрыть все контейнеры
+            document.querySelectorAll('.content-container').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Показать выбранный контейнер
+            document.getElementById(contentId).style.display = 'block';
+            
+            // Убрать активный класс у всех кнопок
+            document.querySelectorAll('.menu-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Добавить активный класс текущей кнопке
+            event.target.classList.add('active');
+        }
+
+        // Показать тестирование по умолчанию
+        document.getElementById('testing').style.display = 'block';
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<p class="info">Здесь вы можете пройти тестирования, которые помогут лучше определить  программу и прогресс вашего обучения</p>
+<p class="test_beginner">1313212132132131</p>
+<p class="test_end">132131311231231231231</p>

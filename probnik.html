@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Три колонки</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/srift.css">
+    <link rel="stylesheet" href="/css/vadvig.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="column1">
+        <p class="logo">
+            <img src="/img/svg/skillmastersmall.svg" alt="lohs">
+        </p>
+        <p class="button_stile">
+            <button class="test" onclick="showContent('testing')">ТЕСТИРОВАНИЕ</button>
+            <button class="test" onclick="showContent('sections')">РАЗДЕЛЫ</button>
+            <button class="test" onclick="showContent('rating')">РЕЙТИНГ</button>
+            <button class="test" onclick="showContent('shop')">МАГАЗИН</button>
+            <button class="test" onclick="showContent('profile')">ПРОФИЛЬ</button>
+            <button class="test" onclick="showContent('more')">ЕЩЕ</button>
+        </p>
+        
+    </div>
+    <div class="column2">
+
+        <div id="testing" class="content-container testing-content">
+            <p class="info">Здесь вы можете пройти тестирования, которые помогут лучше определить  программу и прогресс вашего обучения</p>
+            <button class="begginer">
+                <div class="pink">
+                    <p class="text_pink">Начальное тестирование</p>
+                    <div class="white">
+                        <p class="text_pink1">проверка уровня начальных навыков</p>
+                        <div class="dopinfo">
+                            <p class="oval">33 вопроса</p>
+                            <p class="oval">максимум баллов 165</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </button>
+        </div>
+
+
+        <div id="sections" class="content-container default-content">
+            Контент разделов
+        </div>
+
+        <div id="rating" class="content-container default-content">
+            Рейтинг пользователей
+        </div>
+
+        <div id="shop" class="content-container default-content">
+            Магазин предметов
+        </div>
+
+        <div id="profile" class="content-container default-content">
+            Профиль
+        </div>
+
+        <div id="more" class="content-container default-content">
+            ЕЩЕ
+        </div>
+
+
+
+       
+    </div>
+    
+        <input type="checkbox" id="side-checkbox" />
+        <div class="side-panel">
+            <label class="side-button-2" for="side-checkbox">+</label>    
+            <div class="side-title">
+                <div class="haracter">
+                    <p class="money">1</p>
+                    <p class="fire">2</p>
+                    <p class="like">3</p>
+                </div>
+            </div>
+            <p>Информация в панеле</p>
+        </div>
+        <div class="side-button-1-wr">
+            <label class="side-button-1" for="side-checkbox">
+            <div class="side-b side-open">Открыть</div>
+            <div class="side-b side-close">Закрыть</div>
+            </label>
+        </div>
+    
+</div>
+<script src="/script.js">
+
+</script>
+</body>
+</html>
